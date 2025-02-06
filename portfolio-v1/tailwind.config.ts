@@ -1,17 +1,12 @@
 import type { Config } from "tailwindcss";
-const {heroui} = require("@heroui/react");
+const { heroui } = require("@heroui/react");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    // Heroui plugin content
     "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
-  ],
-  plugins: [heroui()]
-};
-
-
-export default {
-  content: [
+    // Your project content paths
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -24,5 +19,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [heroui()], // Include heroui plugin
 } satisfies Config;
