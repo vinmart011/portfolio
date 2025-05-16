@@ -37,11 +37,27 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col min-h-screen">
-        <div className="flex-grow mt-60">
+        {/* <div className="flex-grow mt-60">
           <h1 className="text-center text-5xl">
             <span className="text-sm">{phraselang[currentPhraseIndex]}</span>{phrases[currentPhraseIndex]} <strong className="text-blue-500">Vincent Martinez</strong>
           </h1>
+        </div> */}
+
+        <div className="flex">
+            <h2 className="text-center mt-4">About me</h2>
         </div>
+        <div className="flex justify-center mt-5 mb-20">
+              <p className="text-start mt-4">
+                My name is Vincent Martinez and I am a software engineer with a passion for creating beautiful and functional web applications. I have experience in various programming languages and frameworks, and I am always eager to learn new technologies.
+              </p>
+              <div>
+                <Card>
+                  <CardBody>
+                    Image Place holder
+                    </CardBody>
+                </Card>
+              </div>
+          </div>
 
         <footer className="flex gap-6 flex-wrap items-center justify-center p-4 bg-gray-800 text-white">
           <a
