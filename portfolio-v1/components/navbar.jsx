@@ -1,34 +1,33 @@
 'use client'
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle,NavbarMenu,NavbarMenuItem, Link} from "@heroui/react";
+import {Navbar, NavbarContent, NavbarItem, Link} from "@heroui/react";
+import { usePathname } from "next/navigation";
 
-export default function Navigation(){
+export default function Navigation() {
+  const pathname = usePathname();
 
-    return (
+  const navLinks = [
+    { href: "/", label: "about" },
+    { href: "/experience", label: "experience" },
+    { href: "/projects", label: "projects" },
+    { href: "/contact", label: "contact" },
+  ];
 
-        <Navbar isBordered maxWidth="full" className="">
-        <NavbarContent className="w-full" data-justify="center">
-          <NavbarItem>
-            <Link className="text-color-black hover:text-color-blue" href="/">
-            about
+  return (
+    <Navbar isBordered maxWidth="full" className="">
+      <NavbarContent className="w-full" data-justify="center">
+        {navLinks.map((link) => (
+          <NavbarItem key={link.href}>
+            <Link
+              className={`text-color-black hover:text-color-blue ${
+                pathname === link.href ? "font-bold text-color-blue underline" : ""
+              }`}
+              href={link.href}
+            >
+              {link.label}
             </Link>
           </NavbarItem>
-          <NavbarItem>
-          <Link className="text-color-black hover:text-color-blue" href="/experience">
-            experience
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-          <Link className="text-color-black hover:text-color-blue" href="/projects">
-            projects
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-          <Link className="text-color-black hover:text-color-blue" href="/contact">
-            contact
-            </Link>
-          </NavbarItem>
-        </NavbarContent>
-      </Navbar>
-
-    );
+        ))}
+      </NavbarContent>
+    </Navbar>
+  );
 }
