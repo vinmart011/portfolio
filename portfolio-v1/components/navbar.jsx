@@ -6,6 +6,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   const navLinks = [
+    { href: "/", label: "home" },
     { href: "/about", label: "about" },
     { href: "/experience", label: "experience" },
     { href: "/projects", label: "projects" },
@@ -13,7 +14,7 @@ export default function Navigation() {
   ];
 
   return (
-    <Navbar isBordered maxWidth="full" className="">
+    <Navbar isBordered maxWidth="full" className="shadow-lg shadow-gray-300 backdrop-blur-sm bg-white/80">
       <NavbarContent className="w-full" data-justify="center">
         {navLinks.map((link) => (
           <NavbarItem key={link.href}>

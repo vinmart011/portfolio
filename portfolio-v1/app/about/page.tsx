@@ -36,28 +36,38 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex flex-col min-h-screen">
-        {/* <div className="flex-grow mt-60">
-          <h1 className="text-center text-5xl">
-            <span className="text-sm">{phraselang[currentPhraseIndex]}</span>{phrases[currentPhraseIndex]} <strong className="text-blue-500">Vincent Martinez</strong>
-          </h1>
-        </div> */}
+      <main className="min-h-screen">
 
-        <div className="flex">
-            <h2 className="text-center mt-4">About me</h2>
-        </div>
-        <div className="flex justify-center mt-5 mb-20">
-              <p className="text-start mt-4">
-                My name is Vincent Martinez and I am a software engineer with a passion for creating beautiful and functional web applications. I have experience in various programming languages and frameworks, and I am always eager to learn new technologies.
-              </p>
-              <div>
-                <Card>
+      <div className="flex-col">
+          <div className="flex">
+            <div className="flex-col">
+                <h2 className=" mt-4 ml-2 text-3xl italic">About me</h2>
+                <p className="text-start mt-4 ml-2 text-xl">
+                  My name is Vincent Martinez and I am a software engineer with a passion for creating beautiful and functional web applications. I have experience in various programming languages and frameworks, and I am always eager to learn new technologies.
+                </p>
+                <h2 className=" mt-4 ml-2 text-3xl italic">Interests</h2>
+                <p className="text-start mt-4 ml-2 text-xl">
+                 I am interested in networks, web development, and devops. 
+                </p>
+                <h2 className=" mt-4 ml-2 text-3xl italic">Hobbies</h2>
+                <p className="text-start mt-4 ml-2 text-xl">
+                  Some of my hobbies include playing games, exercising frequently, and learning musical instruments. I am currently making a small video game in my freetime with the use of Unity and I hope to incorporate some music that I create for it as the soundtrack!
+                </p>
+            </div>
+            <div className="flex justify-center mt-2 ml-2">
+              <div className="flex">
+                <Card className="w-64 h-96 ml-5 mr-5">
                   <CardBody>
-                    Image Place holder
-                    </CardBody>
+                    <Image src="/portrait.jpeg" alt="Vincent Martinez" width={200} height={200} className="rounded-lg" />
+                  </CardBody>
                 </Card>
               </div>
+            </div>
           </div>
+
+        </div>
+        </main>
+
 
         <footer className="flex gap-6 flex-wrap items-center justify-center p-4 bg-gray-800 text-white">
           <a
@@ -106,7 +116,6 @@ export default function Home() {
             Go to nextjs.org →
           </a>
         </footer>
-      </main>
     </>
   );
 }

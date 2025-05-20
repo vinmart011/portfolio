@@ -42,7 +42,7 @@ export default function Home() {
             <span className="text-sm">{phraselang[currentPhraseIndex]}</span>{phrases[currentPhraseIndex]} <strong className="text-blue-500">Vincent Martinez</strong>
           </h1>
         </div>
-
+        
         <footer className="flex gap-6 flex-wrap items-center justify-center p-4 bg-gray-800 text-white">
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
