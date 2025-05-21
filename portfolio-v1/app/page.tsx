@@ -36,14 +36,14 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex flex-col min-h-screen">
-        <div className="flex-grow mt-60">
+      <main className="flex flex-col h-[90.8vh]">
+        <div className="flex-grow pt-60">
           <h1 className="text-center text-5xl">
             <span className="text-sm">{phraselang[currentPhraseIndex]}</span>{phrases[currentPhraseIndex]} <strong className="text-blue-500">Vincent Martinez</strong>
           </h1>
         </div>
-        
-        <footer className="flex gap-6 flex-wrap items-center justify-center p-4 bg-gray-800 text-white">
+      </main>
+      <footer className="flex gap-6 flex-wrap items-center justify-center p-4 bg-gray-800 text-white">
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -90,7 +90,6 @@ export default function Home() {
             Go to nextjs.org →
           </a>
         </footer>
-      </main>
     </>
   );
 }
