@@ -4,35 +4,15 @@ import Image from "next/image";
 import { Card, CardBody, Button } from "@heroui/react";
 
 export default function Home() {
-  const phrases = [
-    "Hi, I'm", //English
-    "Hola, soy", //Spanish
-    "Bonjour, je suis", //French
-    "Ciao, sono", //Italian
-    "Hallo, ich bin", //German
-    "こんにちは、私は", //Japanese
-    "안녕하세요, 저는", //Korean
+
+   const carouselImages = [
+    "/portrait.jpeg",
+    "/carousel/photo2.jpg",
+    "/carousel/photo3.jpg",
   ];
-  const phraselang = [
-    "(US)",
-    "(ES)",
-    "(FR)",
-    "(IT)",
-    "(DE)",
-    "(JP)",
-    "(KP)"
-  ]
-
-  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-
-  //cycle through phrases every 5 seconds
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-    }, 5000);
-
-    return () => clearInterval(intervalId);
-  }, []);
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const prevImage = () => setCarouselIndex((prev) => (prev === 0 ? carouselImages.length - 1 : prev - 1));
+  const nextImage = () => setCarouselIndex((prev) => (prev === carouselImages.length - 1 ? 0 : prev + 1));
 
   return (
     <>
@@ -66,6 +46,30 @@ export default function Home() {
           </div>
 
         </div>
+
+              <div className="flex flex-col items-center my-8">
+        <div className="relative w-80 h-56">
+          <Image
+            src={carouselImages[carouselIndex]}
+            alt={`Carousel ${carouselIndex + 1}`}
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
+        <div className="flex gap-4 mt-4">
+          <button onClick={prevImage} className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Prev</button>
+          <button onClick={nextImage} className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Next</button>
+        </div>
+        <div className="flex gap-2 mt-2">
+          {carouselImages.map((_, idx) => (
+            <span
+              key={idx}
+              className={`w-3 h-3 rounded-full ${idx === carouselIndex ? "bg-blue-500" : "bg-gray-300"}`}
+            />
+          ))}
+        </div>
+      </div>
+
         </main>
 
 
