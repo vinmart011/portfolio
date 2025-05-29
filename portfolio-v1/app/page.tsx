@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <main className="flex flex-col min-h-screen pl-40 pr-40 pt-10 bg-gradient-to-br from-emerald-100 to-sky-300">
         <div className="flex justify-end">
-          <DigitalClock scale={.4}/>
+          {/* <DigitalClock scale={.4}/> */}
         </div>
         <Phrase />
       </main>
