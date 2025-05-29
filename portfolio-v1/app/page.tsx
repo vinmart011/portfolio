@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Card, CardBody, Button } from "@heroui/react";
+import DigitalClock from "@/components/digitalclock"
 
 export default function Home() {
   const phrases = [
@@ -37,6 +38,9 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col h-[90.8vh]">
+        <div className="flex justify-end">
+          <DigitalClock scale={.4}/>
+        </div>
         <div className="flex-grow pt-60">
           <h1 className="text-center text-5xl">
             <span className="text-sm">{phraselang[currentPhraseIndex]}</span>{phrases[currentPhraseIndex]} <strong className="text-blue-500">Vincent Martinez</strong>
