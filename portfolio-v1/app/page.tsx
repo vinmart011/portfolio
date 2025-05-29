@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex flex-col h-[90.8vh]">
+      <main className="flex flex-col h-[90.8vh] pl-40 pr-40 pt-10">
         <div className="flex justify-end">
           <DigitalClock scale={.4}/>
         </div>
