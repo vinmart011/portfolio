@@ -17,6 +17,9 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        proxima: ['proxima', 'sans-serif'],
+      },
     },
   },
   plugins: [heroui()], // Include heroui plugin

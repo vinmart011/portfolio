@@ -15,7 +15,7 @@ export default function Home() {
         </div>
         <Phrase />
       </main>
-      <footer className="flex gap-6 flex-wrap items-center justify-center p-4 bg-gray-800 text-white">
+      {/* <footer className="flex gap-6 flex-wrap items-center justify-center p-4 bg-gray-800 text-white">
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -61,7 +61,7 @@ export default function Home() {
             />
             Go to nextjs.org →
           </a>
-        </footer>
+        </footer> */}
     </>
   );
 }
