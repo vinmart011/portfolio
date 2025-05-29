@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="h-min-screen pl-40 pr-40 pt-10">
+      <main className="min-h-screen pl-40 pr-40 pt-10">
 
         <div className="flex-col">
             <div className="flex">

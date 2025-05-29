@@ -14,7 +14,7 @@ export default function Navigation() {
   ];
 
   return (
-    <Navbar isBordered maxWidth="full" className="shadow-lg shadow-gray-300 backdrop-blur-sm bg-white/80 sticky top-0 z-50">
+    <Navbar isBordered maxWidth="full" className="shadow-lg shadow-indigo-200 backdrop-blur-sm bg-white/80 sticky top-0 z-50">
       <NavbarContent className="w-full" data-justify="center">
         {navLinks.map((link) => (
           <NavbarItem key={link.href}>
