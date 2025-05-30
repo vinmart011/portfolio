@@ -9,11 +9,15 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex flex-col min-h-screen pl-40 pr-40 pt-10 bg-gradient-to-br from-emerald-100 to-sky-300">
-        <div className="flex justify-end">
-          {/* <DigitalClock scale={.4}/> */}
+      <main className="relative flex flex-col min-h-screen pl-40 pr-40 pt-10">
+        <div className="absolute inset-0 bg-[url('/LW002.jpg')] bg-cover bg-center bg-no-repeat">
+          <div className="absolute inset-0  bg-gradient-to-br from-emerald-200/70 to-sky-300/70">
+          {/* <div className="flex justify-end">
+            <DigitalClock scale={.4}/>
+          </div> */}
+            <Phrase />
+          </div>
         </div>
-        <Phrase />
       </main>
       {/* <footer className="flex gap-6 flex-wrap items-center justify-center p-4 bg-gray-800 text-white">
           <a
