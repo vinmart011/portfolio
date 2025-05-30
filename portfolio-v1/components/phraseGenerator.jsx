@@ -35,7 +35,7 @@ export default function Phrases() {
     return (
         <div className="flex flex-row pt-60 justify-center text-center">
           <h1 className="flex text-6xl font-proxima">
-            <span className="text-sm">{phraselang[currentPhraseIndex]}</span>{phrases[currentPhraseIndex]} <strong className="pl-4 text-blue-500"><div className=" transition-all duration-200 ease-in-out hover:skew-x-[-12deg]">Vincent Martinez</div></strong>
+            <span className="text-sm">{phraselang[currentPhraseIndex]}</span><span className="text-transparent bg-clip-text bg-gradient-to-br from-cyan-600 to-pink-400 h-20">{phrases[currentPhraseIndex]}</span> <strong className="pl-4 text-blue-500"><div className=" transition-all duration-200 ease-in-out hover:skew-x-[-12deg]">Vincent Martinez</div></strong>
           </h1>
         </div>
     );
