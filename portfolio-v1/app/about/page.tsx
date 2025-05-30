@@ -32,16 +32,12 @@ export default function Home() {
                 <div className="flex">
                   <div className="flex-col">
 
-                    <Card className="pb-5 mb-5 hover:-translate-y-1 hover:scale-30">
-                      <CardBody>
-                          <h2 className=" mt-4 ml-2 text-3xl italic">About me</h2>
-                          <p className="text-start mt-4 ml-2 text-xl">
+                          <h2 className="mt-4 ml-2 text-3xl italic">About</h2>
+                          <p className="mt-4 ml-2 text-xl">
                             My name is Vincent Martinez and I am a software engineer with a passion for creating beautiful and functional web applications. I have experience in various programming languages and frameworks, and I am always eager to learn new technologies.
                           </p>
-                        </CardBody>
-                    </Card>
 
-                    <Card className="pb-5 mb-5 hover:-translate-y-1 hover:scale-30">
+                    {/* <Card className="pb-5 mb-5 hover:-translate-y-1 hover:scale-30">
                       <CardBody>
                           <h2 className=" mt-4 ml-2 text-3xl italic">Interests</h2>
                           <p className="text-start mt-4 ml-2 text-xl">
@@ -57,7 +53,7 @@ export default function Home() {
                             Some of my hobbies include playing games, exercising frequently, and learning musical instruments. I am currently making a small video game in my freetime with the use of Unity and I hope to incorporate some music that I create for it as the soundtrack!
                           </p>
                       </CardBody>
-                    </Card>
+                    </Card> */}
                   </div> 
               
                 </div>

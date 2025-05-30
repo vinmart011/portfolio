@@ -20,8 +20,8 @@ export default function Navigation() {
         {navLinks.map((link) => (
           <NavbarItem key={link.href}>
             <Link
-              className={`text-color-black hover:text-color-blue ${
-                pathname === link.href ? "font-bold text-color-blue underline" : ""
+              className={`text-black-500 hover:text-transparent transition-all duration-200 ease-in-out hover:skew-x-[-12deg] bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-300 ${
+                pathname === link.href ? "font-bold text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-300 skew-x-[-12deg] " : ""
               }`}
               href={link.href}
             >
