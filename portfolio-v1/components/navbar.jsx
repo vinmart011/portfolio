@@ -14,7 +14,7 @@ export default function Navigation() {
   ];
 
   return (
-    <Navbar isBordered maxWidth="full" className="shadow-lg shadow-indigo-200 backdrop-blur-sm bg-white/80 sticky top-0 z-50">
+    <Navbar isBordered maxWidth="full" className="shadow-md shadow-indigo-200 backdrop-blur-sm bg-white/80 sticky top-0 z-50">
       <strong className="font-proxima text-3xl text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-300">VM</strong>
       <NavbarContent className="flex w-full" data-justify="center">
         {navLinks.map((link) => (
