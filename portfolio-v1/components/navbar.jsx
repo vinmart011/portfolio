@@ -14,9 +14,9 @@ export default function Navigation() {
   ];
 
   return (
-    <Navbar maxWidth="full" className=" shadow-md shadow-indigo-200 backdrop-blur-sm bg-gray-50/90 sticky z-50" >
+    <Navbar maxWidth="full" className="flex shadow-md shadow-indigo-200 backdrop-blur-sm bg-gray-50/90 sticky z-50" >
        <strong className="flex flex-start font-proxima text-3xl text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-300">VM</strong>
-      <NavbarContent className="flex mr-[100px] w-full justify-center items-center" justify="center">
+      <NavbarContent className="flex mr-[75px] w-full justify-center items-center" justify="center">
          
         {navLinks.map((link) => (
           <NavbarItem key={link.href}>

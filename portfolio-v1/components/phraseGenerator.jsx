@@ -33,10 +33,15 @@ export default function Phrases() {
   }, []);
   
     return (
-        <div className="flex flex-row pt-60 justify-center text-center">
+      <>
+        <div className="flex flex-row pt-[18%] justify-center text-center">
           <h1 className="flex text-6xl font-proxima">
             <span className="text-sm text-gray-600 font-proxima ">{phraselang[currentPhraseIndex]}</span><span className="text-transparent bg-clip-text bg-gradient-to-br from-cyan-600 to-pink-400 h-20">{phrases[currentPhraseIndex]}</span> <strong className="pl-4"><div className="transition-all duration-200 ease-in-out hover:skew-x-[-12deg] text-transparent bg-clip-text bg-gradient-to-bl from-cyan-600 to-pink-400 ">Vincent Martinez</div></strong>
           </h1>
         </div>
+        <div className="flex flex-col justify-center pt-1">
+          <p className="text-cyan-800 text-center text-lg font-proxima">Software Engineer</p>
+        </div>
+        </>
     );
   }
