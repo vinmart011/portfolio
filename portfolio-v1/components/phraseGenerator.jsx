@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 export default function Phrases() {
     const phrases = [
         "Hi, I'm", //English
-        "Hola, soy", //Spanish
+        "Hola, me llamo", //Spanish
         // "Bonjour, je suis", //French
         // "Ciao, sono", //Italian
         // "Hallo, ich bin", //German
