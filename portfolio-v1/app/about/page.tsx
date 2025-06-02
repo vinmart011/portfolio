@@ -25,13 +25,10 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex relative min-h-screen">
-        <div className="absolute inset-0 bg-[url('/LW002.jpg')] bg-cover bg-center bg-no-repeat">
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-200/70 to-sky-300/70">
+      <main className="w-full h-full bg-[url('/bg.png')] bg-cover bg-center bg-no-repeat p-4 md:p-8">
             <div className="flex-col pl-40 pr-40 pt-10">
                 <div className="flex">
                   <div className="flex-col">
-
                           <h2 className="mt-4 ml-2 text-3xl italic">About</h2>
                           <p className="mt-4 ml-2 text-xl">
                             My name is Vincent Martinez and I am a software engineer with a passion for creating beautiful and functional web applications. I have experience in various programming languages and frameworks, and I am always eager to learn new technologies.
@@ -88,8 +85,6 @@ export default function Home() {
                   </div> */}
 
               </div>
-            </div>
-          </div>
         </main>
     </>
   );
