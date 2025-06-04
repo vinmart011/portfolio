@@ -1,7 +1,7 @@
 'use client'
-import { useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { Card, CardBody, Button, Image } from "@heroui/react";
+import { Card, CardBody, Button, Image, Avatar, Divider } from "@heroui/react";
 
 export default function Home() {
 
@@ -26,33 +26,38 @@ export default function Home() {
   return (
     <>
       <main className="w-full h-full bg-[url('/bg.png')] bg-cover bg-center bg-no-repeat p-4 md:p-8">
-            <div className="flex-col pl-40 pr-40 pt-10">
+            <div className="flex-col pl-40 pr-40 pt-8">
                 <div className="flex">
                   <div className="flex-col">
-                          <h2 className="mt-4 ml-2 text-3xl italic">About</h2>
-                          <p className="mt-4 ml-2 text-xl">
-                            My name is Vincent Martinez and I am a software engineer with a passion for creating beautiful and functional web applications. I have experience in various programming languages and frameworks, and I am always eager to learn new technologies.
+                          <h2 className="mt-4 ml-2 text-3xl italic text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-600 font-proxima font-bold">About</h2>
+                          <Divider className="h-[.5%] w-[12%] bg-cyan-600"/>
+                          <p className="mt-4 ml-2 text-xl font-proxima">
+                            My name is Vincent Martinez and I am a software engineer with a Bachelors of Science in Computer Science from the University of California, Riverside. 
                           </p>
 
-                    {/* <Card className="pb-5 mb-5 hover:-translate-y-1 hover:scale-30">
-                      <CardBody>
-                          <h2 className=" mt-4 ml-2 text-3xl italic">Interests</h2>
-                          <p className="text-start mt-4 ml-2 text-xl">
-                          I am interested in networks, web development, and devops. 
+                          <h2 className="mt-4 ml-2 text-3xl italic text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-600 font-proxima font-bold">Interests</h2>
+                            <Divider className="h-[.5%] w-[15%] bg-cyan-600"/>
+                          <p className="mt-4 ml-2 text-xl font-proxima">
+                            I love writing code that expresses my creativity and my passion for technology. To that extent, I enjoy making websites, using C++, and exploring what it takes to make a video game.
                           </p>
-                      </CardBody>
-                    </Card>
-
-                    <Card className="pb-5 hover:-translate-y-1 hover:scale-30">
-                      <CardBody>
-                          <h2 className=" mt-4 ml-2 text-3xl italic">Hobbies</h2>
-                          <p className="text-start mt-4 ml-2 text-xl">
-                            Some of my hobbies include playing games, exercising frequently, and learning musical instruments. I am currently making a small video game in my freetime with the use of Unity and I hope to incorporate some music that I create for it as the soundtrack!
-                          </p>
-                      </CardBody>
-                    </Card> */}
                   </div> 
-              
+
+  {/* Splash background */}
+  <Image
+    src="/splash.jpg"
+    className=" z-10  bg-gradient-to-br from-cyan-400 via-pink-300 to-indigo-300 " />
+  {/* Portrait image */}
+                    <div className="flex ml-4">
+  <Image
+    src="/portrait.jpeg"
+    className="relative z-10 border-3 border-cyan-500 shadow-xl shadow-cyan-800 rounded-full"
+    radius="lg"
+    isBlurred={false}
+    width={500}
+    height={500}
+    alt="Vincent Martinez"
+  />
+</div>
                 </div>
 {/* 
                 <div 
