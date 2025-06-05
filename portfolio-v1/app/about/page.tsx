@@ -36,59 +36,41 @@ export default function Home() {
                           </p>
 
                           <h2 className="mt-4 ml-2 text-3xl italic text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-600 font-proxima font-bold">Interests</h2>
-                            <Divider className="h-[.5%] w-[15%] bg-cyan-600"/>
+                            <Divider className="h-[.7%] w-[15%] bg-cyan-600"/>
                           <p className="mt-4 ml-2 text-xl font-proxima">
                             I love writing code that expresses my creativity and my passion for technology. To that extent, I enjoy making websites, using C++, and exploring what it takes to make a video game.
                           </p>
+
+                          <h2 className="mt-4 ml-2 text-3xl italic text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-600 font-proxima font-bold">Hobbies</h2>
+                            <Divider className="h-[.5%] w-[15%] bg-cyan-600"/>
+                          <p className="mt-4 ml-2 text-xl font-proxima">
+                            When I'm not working on code, I enjoy exercising, learning new ways to cook, and figuring out how to play guitar. I would love to travel more often and experience new cultures as well!
+                          </p>
                   </div> 
 
-  {/* Splash background */}
-  <Image
-    src="/splash.jpg"
-    className=" z-10  bg-gradient-to-br from-cyan-400 via-pink-300 to-indigo-300 " />
-  {/* Portrait image */}
-                    <div className="flex ml-4">
-  <Image
-    src="/portrait.jpeg"
-    className="relative z-10 border-3 border-cyan-500 shadow-xl shadow-cyan-800 rounded-full"
-    radius="lg"
-    isBlurred={false}
-    width={500}
-    height={500}
-    alt="Vincent Martinez"
-  />
-</div>
+                  <div className="w-[100%] h-[100%]">
+                    <svg height="280" width="360" className="fixed left-[63.2%] w-[80%] h-[60%]  z-0 ">
+                        <defs>
+                        <linearGradient id="polyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#6ee7b7" />
+                          <stop offset="100%" stopColor="#06b6d4" />
+                        </linearGradient>
+                      </defs>
+                    <polygon points="225,22.5 387,115.5 387,303 225,397.5 63,303 63,115.5"
+                    fill="url(#polyGradient)" stroke="#164e63" stroke-width="3" />
+                  </svg>
+                    {/* <div className="fixed left-[37%] skew-y-[-10deg] w-[80%] h-[60%] bg-gradient-to-br from-cyan-500 to-blue-800 mask-brush z-0 "></div> */}
+                    <div className="z-10 pl-[40%]">
+                      <Image
+                        src="/portrait.png"
+                        className=" w-full object-cover fade-rect pb-6"
+                        height={400}
+                        alt="Vincent Martinez"
+                      />
+                    </div>
+                  </div>
+
                 </div>
-{/* 
-                <div 
-                    id="carousel-scroll"
-                    className="flex justify-center overflow-x-auto whitespace-nowrap py-8">
-                      <InfiniteScroll
-                        dataLength={carouselImages.length}
-                        next={fetchData}
-                        hasMore={hasMore}
-                        loader={<h4>Loading...</h4>}
-                        endMessage={
-                          <p style={{ textAlign: 'center' }}>
-                            <b>Yay! You have seen it all</b>
-                          </p>
-                        }
-                        scrollableTarget="carousel-scroll"
-                        className="flex flex-row gap-4">
-
-                          {carouselImages.map((image, idx) => (
-                            <Image
-                            key={image + idx}
-                            src={image}
-                            alt="Vincent Martinez"
-                            width={280}
-                            height={360}
-                            className="rounded-lg inline-block"
-                          />
-                      ))}
-                    </InfiniteScroll>
-                  </div> */}
-
               </div>
         </main>
     </>
