@@ -22,7 +22,7 @@ export default function Navigation() {
       maxWidth="full"
       className="flex flex-col sm:flex-row shadow-md shadow-indigo-200 backdrop-blur-sm bg-gray-50/90 sticky top-0 z-50"
     >
-      <div className="flex justify-between items-center px-4 py-2 sm:px-6 sm:py-3">
+      <div className="flex justify-between items-center py-2 sm:py-3">
         <strong className="hidden sm:block font-proxima text-3xl text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-300">
           VM
         </strong>
@@ -58,7 +58,7 @@ export default function Navigation() {
       </div>
 
       <NavbarContent
-        className="hidden sm:flex w-full justify-center items-center space-x-4 sm:space-x-8 px-4 py-2"
+        className="hidden sm:flex w-full justify-center items-center space-x-4 sm:space-x-8 px-4 py-2 pr-20"
         justify="center"
       >
         {navLinks.map((link) => (
