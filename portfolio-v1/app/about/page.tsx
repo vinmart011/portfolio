@@ -62,11 +62,15 @@ export default function Home() {
                   <stop offset="0%" stopColor="#6ee7b7" />
                   <stop offset="100%" stopColor="#06b6d4" />
                 </linearGradient>
+                <linearGradient id="polyGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#06b6d4" />
+                  <stop offset="100%" stopColor="#ec4899" />
+                </linearGradient>
               </defs>
               <polygon
                 points="225,22.5 387,115.5 387,303 225,397.5 63,303 63,115.5"
                 fill="url(#polyGradient)"
-                stroke="#164e63"
+                stroke="url(#polyGradient2)"
                 strokeWidth="3"
               />
             </svg>
