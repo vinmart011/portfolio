@@ -20,7 +20,17 @@ export default function Home() {
       ].map((img, idx) => `${img}?v=${carouselImages.length + idx}`);
       setCarouselImages((prev) => [...prev, ...newImages]);
     }, 1000);
+
   };
+
+    const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = "/resume.pdf";
+  link.download = "Vincent_Martinez_Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+    };
 
   return (
     <>
@@ -53,12 +63,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex items-center justify-center w-full max-w-md mx-auto">
+          <div className="flex items-center justify-center w-full max-w-md mx-auto sm:ml-[8%]">
             <div className="relative w-full pb-20 group">
               <Card className="bg-gradient-to-br from-cyan-500 to-pink-600">
                 <CardBody className="flex items-center transition-opacity duration-200">
                   <div className="flex absolute items-center justify-center w-[50%] h-[50%]">
-                    <Button href="resume.pdf" endContent={<DownloadSVG />} className="w-full h-[20%] group-hover:opacity-100 translate-y-[200%]  opacity-0 z-20 bg-gradient-to-br from-cyan-300 to-pink-300 via-blue-300 font-proxima">Download PDF</Button> 
+                    <Button href="resume.pdf" endContent={<DownloadSVG />} onPress={handleDownload}className="border-1 border-slate-200 w-full h-[20%] group-hover:opacity-100 translate-y-[200%]  opacity-0 z-20 bg-gradient-to-br from-cyan-300 to-pink-300 via-blue-300 font-proxima">Download PDF</Button> 
                   </div>
                   <Image id="resume" src="resume.png" className="border-0 group-hover:opacity-10 object-cover h-full w-full z-10" />
                 </CardBody>

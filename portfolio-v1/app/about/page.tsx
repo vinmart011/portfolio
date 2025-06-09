@@ -38,7 +38,7 @@ export default function Home() {
             <h2 className="mt-8 text-3xl italic text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-600 font-proxima font-bold">
               Interests
             </h2>
-            <Divider className="h-[3px] w-[40%] bg-cyan-600" />
+            <Divider className="h-[2px] w-[40%] bg-cyan-600" />
             <p className="mt-4 text-lg md:text-xl font-proxima">
               I love writing code that expresses my creativity and my passion for technology. To that extent, I enjoy making websites, using C++, and exploring what it takes to make a video game.
             </p>
@@ -52,7 +52,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex-1 relative flex items-center justify-center w-full max-w-md mx-auto">
+          <div className="flex-1 relative flex items-center justify-center w-full max-w-md mx-auto sm:ml-[8%]">
             <svg
               viewBox="0 0 450 450"
               className="absolute w-[120%] h-auto max-w-[800px] md:max-w-[500px] z-0"
