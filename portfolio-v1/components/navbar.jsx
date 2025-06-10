@@ -1,8 +1,9 @@
 'use client';
 import { useState } from "react";
-import { Navbar, NavbarContent, NavbarItem, Link } from "@heroui/react";
+import { Navbar, NavbarContent, NavbarItem } from "@heroui/react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import NextLink from "next/link";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -56,7 +57,7 @@ export default function Navigation() {
         >
           {navLinks.map((link) => (
             <NavbarItem key={link.href}>
-              <Link
+              <NextLink
                 href={link.href}
                 className={`text-black-500 hover:text-transparent transition-all duration-200 ease-in-out hover:skew-x-[-12deg] bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-300 ${
                   pathname === link.href
@@ -65,7 +66,7 @@ export default function Navigation() {
                 }`}
               >
                 {link.label}
-              </Link>
+              </NextLink>
             </NavbarItem>
           ))}
         </NavbarContent>
@@ -81,7 +82,7 @@ export default function Navigation() {
             className="sm:hidden overflow-hidden fixed top-16 left-0 w-full bg-gray-50/95 backdrop-blur-sm px-4 py-6 space-y-4 border-t border-indigo-200 shadow-md z-40"
           >
             {navLinks.map((link) => (
-              <Link
+              <NextLink
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
@@ -92,7 +93,7 @@ export default function Navigation() {
                 }`}
               >
                 {link.label}
-              </Link>
+              </NextLink>
             ))}
           </motion.div>
         )}
