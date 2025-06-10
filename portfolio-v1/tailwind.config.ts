@@ -3,7 +3,6 @@ const { heroui } = require("@heroui/react");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  media: false, // <--- Disable dark mode
   content: [
     "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
