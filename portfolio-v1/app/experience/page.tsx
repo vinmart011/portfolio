@@ -75,7 +75,7 @@ const [isSmallScreen, setIsSmallScreen] = useState(false);
               Experience
             </h2>
             <Divider className="h-[2px] w-[40%] bg-cyan-600" />
-            <p className="mt-4 text-lg md:text-xl font-proxima">
+            <p className="mt-4 text-lg md:text-xl font-proxima text-gray-900">
               I have worked on various projects which employed the use of C++, Python, and JavaScript. I have also worked with Next.JS to a large degree. My experience includes developing web applications, creating APIs, and working across the stack. 
               <br /> <br />
               My professional expertise, as well as relevant skill set, can be found in-depth via my personal resume linked on this page.

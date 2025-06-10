@@ -31,7 +31,7 @@ export default function Home() {
               About
             </h2>
             <Divider className="h-[2px] w-[40%] bg-cyan-600" />
-            <p className="mt-4 text-lg md:text-xl font-proxima">
+            <p className="mt-4 text-lg md:text-xl font-proxima text-gray-900">
               My name is Vincent Martinez and I am a software engineer with a Bachelors of Science in Computer Science from the University of California, Riverside.
             </p>
 
@@ -39,7 +39,7 @@ export default function Home() {
               Interests
             </h2>
             <Divider className="h-[2px] w-[40%] bg-cyan-600" />
-            <p className="mt-4 text-lg md:text-xl font-proxima">
+            <p className="mt-4 text-lg md:text-xl font-proxima text-gray-900">
               I love writing code that expresses my creativity and my passion for technology. To that extent, I enjoy making websites, using C++, and exploring what it takes to make a video game.
             </p>
 
@@ -47,7 +47,7 @@ export default function Home() {
               Hobbies
             </h2>
             <Divider className="h-[2px] w-[40%] bg-cyan-600" />
-            <p className="mt-4 text-lg md:text-xl font-proxima">
+            <p className="mt-4 text-lg md:text-xl font-proxima text-gray-900">
               When I'm not working on code, I enjoy exercising, learning new ways to cook, and figuring out how to play guitar. I would love to travel more often and experience new cultures as well!
             </p>
           </div>
