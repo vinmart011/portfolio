@@ -11,24 +11,30 @@ export default function Home() {
         <Phrase />
         
         <div className="flex flex-col sm:flex-row justify-center items-center mt-20 gap-y-8 sm:gap-y-0 sm:gap-x-20">
-          <Avatar
-            src="/github-mark-white.svg"
-            alt="GitHub Icon"
-            fallback="GH"
-            className="flex border-1.5 bg-cyan-300 border-gray-300 w-[60px] h-[60px] shadow-lg shadow-slate-400 transition duration-300 ease-in-out hover:scale-110"
-          />
-          <Avatar
-            src="/lnsvg.png"
-            alt="LinkedIn Icon"
-            fallback="LN"
-            className="flex border-1.5 bg-cyan-300 border-gray-300 w-[60px] h-[60px] shadow-lg shadow-slate-400 transition duration-300 ease-in-out hover:scale-110"
-          />
-          <Avatar
-            src="/email.png"
-            alt="Email Icon"
-            fallback="EM"
-            className="flex border-1.5 bg-cyan-300 border-neutral-100 w-[60px] h-[60px] shadow-lg shadow-slate-400 transition duration-300 ease-in-out hover:scale-110"
-          />
+          <a href="https://github.com/vinmart011" target="_blank" rel="noopener noreferrer">
+            <Avatar
+              src="/github-mark-white.svg"
+              alt="GitHub Icon"
+              fallback="GH"
+              className="flex border-1.5 bg-cyan-300 border-gray-300 w-[60px] h-[60px] shadow-lg shadow-slate-400 transition duration-300 ease-in-out hover:scale-110"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/vinmart011/" target="_blank" rel="noopener noreferrer">
+            <Avatar
+              src="/lnsvg.png"
+              alt="LinkedIn Icon"
+              fallback="LN"
+              className="flex border-1.5 bg-cyan-300 border-gray-300 w-[60px] h-[60px] shadow-lg shadow-slate-400 transition duration-300 ease-in-out hover:scale-110"
+            />
+          </a>
+          <a href="mailto:mr.martinezpuentes@gmail.com">
+            <Avatar
+              src="/email.png"
+              alt="Email Icon"
+              fallback="EM"
+              className="flex border-1.5 bg-cyan-300 border-neutral-100 w-[60px] h-[60px] shadow-lg shadow-slate-400 transition duration-300 ease-in-out hover:scale-110 z-10"
+            />
+          </a>
         </div>
       </div>
     </main>
