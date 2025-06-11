@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-import { Navbar, NavbarContent, NavbarItem } from "@heroui/react";
+import { Navbar, NavbarContent, NavbarItem, Link } from "@heroui/react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import NextLink from "next/link";
@@ -26,7 +26,7 @@ export default function Navigation() {
         className="shadow-md shadow-indigo-200 backdrop-blur-sm bg-gray-50/90 sticky top-0 z-50"
       >
         <div className="flex justify-between items-center w-full px-4 py-3 sm:px-6">
-          <div className="hidden sm:block font-proxima text-3xl text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-300">
+          <div className="flex hidden sm:block font-proxima text-3xl text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-300">
             VM
           </div>
 
@@ -52,21 +52,21 @@ export default function Navigation() {
 
 
         <NavbarContent
-          className="hidden sm:flex w-full justify-center items-center space-x-8 py-2"
+          className="hidden sm:flex w-full justify-center items-center space-x-8 py-2 mr-4"
           justify="center"
         >
           {navLinks.map((link) => (
             <NavbarItem key={link.href}>
-              <NextLink
+              <Link
                 href={link.href}
-                className={`text-black-500 hover:text-transparent transition-all duration-200 ease-in-out hover:skew-x-[-12deg] bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-300 ${
+                className={`inline-block text-black-500 hover:text-transparent transition-all ease-in-out duration-100 ease-in-out hover:-skew-x-12 bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-300 ${
                   pathname === link.href
-                    ? "font-bold text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-300 skew-x-[-12deg]"
+                    ? "font-bold text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-300"
                     : ""
                 }`}
               >
                 {link.label}
-              </NextLink>
+              </Link>
             </NavbarItem>
           ))}
         </NavbarContent>

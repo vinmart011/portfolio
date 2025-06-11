@@ -1,35 +1,35 @@
-'use client'
-import Image from "next/image";
-import { Card, CardBody, Button, Avatar } from "@heroui/react";
-import DigitalClock from "@/components/digitalclock";
-import Phrase from "@/components/phraseGenerator";
+'use client';
+import { Card, CardBody, Button } from "@heroui/react";
 
 export default function Home() {
   return (
     <main className="w-full h-full bg-[url('/bg.png')] bg-cover bg-center bg-no-repeat p-4 md:p-8">
-      <div className="max-w-7xl mx-auto">
-        <Phrase />
-        
-        <div className="flex flex-col sm:flex-row justify-center items-center mt-20 gap-y-8 sm:gap-y-0 sm:gap-x-20">
-          <Avatar
-            src="/github-mark-white.svg"
-            alt="GitHub Icon"
-            fallback="GH"
-            className="flex border-1.5 bg-cyan-300 border-gray-300 w-[60px] h-[60px] shadow-lg shadow-slate-400 transition duration-300 ease-in-out hover:scale-110"
-          />
-          <Avatar
-            src="/lnsvg.png"
-            alt="LinkedIn Icon"
-            fallback="LN"
-            className="flex border-1.5 bg-cyan-300 border-gray-300 w-[60px] h-[60px] shadow-lg shadow-slate-400 transition duration-300 ease-in-out hover:scale-110"
-          />
-          <Avatar
-            src="/email.png"
-            alt="Email Icon"
-            fallback="EM"
-            className="flex border-1.5 bg-cyan-300 border-neutral-100 w-[60px] h-[60px] shadow-lg shadow-slate-400 transition duration-300 ease-in-out hover:scale-110"
-          />
-        </div>
+      <div className="max-w-4xl mx-auto text-center ">
+        <h1 className="text-4xl font-bold mb-4">Get in touch</h1>
+        <p className="text-lg text-gray-700 mb-8">
+          Whether you want to reach me regarding work or just tech in general, please don't hesitate to send me an email!  🧑‍💻
+        </p>
+        <Card className="bg-white shadow-xl rounded-2xl p-6">
+          <CardBody>
+            <h2 className="text-2xl font-semibold mb-6">Connect with me</h2>
+              <form 
+                action="https://formspree.io/f/xpwrdpev" 
+                method="POST"
+                className="space-y-6"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <input type="text" name="firstName" placeholder="First name" className="border-b p-2 outline-none" required />
+                  <input type="text" name="lastName" placeholder="Last name" className="border-b p-2 outline-none" required />
+                </div>
+                <input type="email" name="email" placeholder="Email address" className="w-full border-b p-2 outline-none" required />
+                <input type="text" name="subject" placeholder="Subject" className="w-full border-b p-2 outline-none" />
+                <textarea name="message" placeholder="Message" className="w-full border-b p-2 outline-none h-32 resize-none" required />
+                <Button type="submit" className="bg-black text-white w-full rounded-md py-3 text-lg">
+                  Send
+                </Button>
+              </form>
+          </CardBody>
+        </Card>
       </div>
     </main>
   );
