@@ -49,7 +49,7 @@ export default function Navigation() {
               )}
             </svg>
           </button>
-        </div>
+
 
         <NavbarContent
           className="hidden sm:flex w-full justify-center items-center space-x-8 py-2"
@@ -70,6 +70,7 @@ export default function Navigation() {
             </NavbarItem>
           ))}
         </NavbarContent>
+        </div>
       </Navbar>
 
       <AnimatePresence>
