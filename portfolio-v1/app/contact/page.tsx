@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <main className="w-full h-full bg-[url('/bg.png')] bg-cover bg-center bg-no-repeat p-4 md:p-8">
       <div className="max-w-4xl mx-auto text-center ">
-        <h1 className="text-4xl font-bold mb-4">Get in touch</h1>
-        <p className="text-lg text-gray-700 mb-8">
+        <h1 className="text-4xl italic text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-600 font-proxima font-bold">Get in touch</h1>
+        <p className="mt-4 text-lg md:text-xl font-proxima text-gray-600 mb-8">
           Whether you want to reach me regarding work or just tech in general, please don't hesitate to send me an email!  🧑‍💻
         </p>
         <Card className="bg-white shadow-xl rounded-2xl p-6">
