@@ -59,7 +59,7 @@ export default function Navigation() {
             <NavbarItem key={link.href}>
               <Link
                 href={link.href}
-                className={`inline-block text-black-500 hover:text-transparent transition-all ease-in-out duration-100 ease-in-out hover:-skew-x-12 bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-300 ${
+                className={`inline-block text-gray-900 hover:text-transparent transition-all ease-in-out duration-100 ease-in-out hover:-skew-x-12 bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-300 ${
                   pathname === link.href
                     ? "font-bold text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-300"
                     : ""
