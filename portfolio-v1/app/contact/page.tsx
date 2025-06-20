@@ -11,7 +11,7 @@ export default function Home() {
         </p>
         <Card className="bg-white shadow-xl rounded-2xl p-6">
           <CardBody>
-            <h2 className="text-2xl font-semibold mb-6">Connect with me</h2>
+            <h2 className="text-2xl text-gray-900 font-semibold mb-6">Connect with me</h2>
               <form 
                 action="https://formspree.io/f/xpwrdpev" 
                 method="POST"
