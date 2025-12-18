@@ -31,7 +31,7 @@ export default function Home() {
               About
             </h2>
             <Divider className="h-[2px] w-[40%] bg-cyan-600" />
-            <p className="mt-4 text-lg md:text-xl font-proxima">
+            <p className="mt-4 text-xl md:text-xl font-proxima">
               My name is Vincent Martinez and I am a software engineer with a Bachelors of Science in Computer Science from the University of California, Riverside.
             </p>
 
