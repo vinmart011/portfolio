@@ -1,96 +1,36 @@
-'use client'
-import { useState, useEffect } from "react";
-import Image from "next/image";
+'use client';
 import { Card, CardBody, Button } from "@heroui/react";
 
 export default function Home() {
-  const phrases = [
-    "Hi, I'm", //English
-    "Hola, soy", //Spanish
-    "Bonjour, je suis", //French
-    "Ciao, sono", //Italian
-    "Hallo, ich bin", //German
-    "こんにちは、私は", //Japanese
-    "안녕하세요, 저는", //Korean
-  ];
-  const phraselang = [
-    "(US)",
-    "(ES)",
-    "(FR)",
-    "(IT)",
-    "(DE)",
-    "(JP)",
-    "(KP)"
-  ]
-
-  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-
-  //cycle through phrases every 5 seconds
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-    }, 5000);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
   return (
-    <>
-      <main className="flex flex-col min-h-screen">
-        <div className="flex-grow mt-60">
-          <h1 className="text-center text-5xl">
-            <span className="text-sm">{phraselang[currentPhraseIndex]}</span>{phrases[currentPhraseIndex]} <strong className="text-blue-500">Vincent Martinez</strong>
-          </h1>
-        </div>
-
-        <footer className="flex gap-6 flex-wrap items-center justify-center p-4 bg-gray-800 text-white">
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/file.svg"
-              alt="File icon"
-              width={16}
-              height={16}
-            />
-            Learn
-          </a>
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/window.svg"
-              alt="Window icon"
-              width={16}
-              height={16}
-            />
-            Examples
-          </a>
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/globe.svg"
-              alt="Globe icon"
-              width={16}
-              height={16}
-            />
-            Go to nextjs.org →
-          </a>
-        </footer>
-      </main>
-    </>
+    <main className="w-full h-full bg-[url('/bg.png')] bg-cover bg-center bg-no-repeat p-4 md:p-8">
+      <div className="max-w-4xl mx-auto text-center ">
+        <h1 className="text-4xl italic text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-600 font-proxima font-bold">Get in touch</h1>
+        <p className="mt-4 text-lg md:text-xl font-proxima text-gray-600 mb-8">
+          Whether you want to reach me regarding work or just tech in general, please don't hesitate to send me an email!  🧑‍💻
+        </p>
+        <Card className="bg-white shadow-xl rounded-2xl p-6">
+          <CardBody>
+            <h2 className="text-2xl text-gray-900 font-semibold mb-6">Connect with me</h2>
+              <form 
+                action="https://formspree.io/f/xpwrdpev" 
+                method="POST"
+                className="space-y-6"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <input type="text" name="firstName" placeholder="First name" className="border-b p-2 outline-none" required />
+                  <input type="text" name="lastName" placeholder="Last name" className="border-b p-2 outline-none" required />
+                </div>
+                <input type="email" name="email" placeholder="Email address" className="w-full border-b p-2 outline-none" required />
+                <input type="text" name="subject" placeholder="Subject" className="w-full border-b p-2 outline-none" />
+                <textarea name="message" placeholder="Message" className="w-full border-b p-2 outline-none h-32 resize-none" required />
+                <Button type="submit" className="bg-black text-white w-full rounded-md py-3 text-lg">
+                  Send
+                </Button>
+              </form>
+          </CardBody>
+        </Card>
+      </div>
+    </main>
   );
 }

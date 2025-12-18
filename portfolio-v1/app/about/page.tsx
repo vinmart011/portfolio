@@ -31,15 +31,15 @@ export default function Home() {
               About
             </h2>
             <Divider className="h-[2px] w-[40%] bg-cyan-600" />
-            <p className="mt-4 text-xl md:text-xl font-proxima">
+            <p className="mt-4 text-lg md:text-xl font-proxima text-gray-900">
               My name is Vincent Martinez and I am a software engineer with a Bachelors of Science in Computer Science from the University of California, Riverside.
             </p>
 
             <h2 className="mt-8 text-3xl italic text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-pink-600 font-proxima font-bold">
               Interests
             </h2>
-            <Divider className="h-[3px] w-[40%] bg-cyan-600" />
-            <p className="mt-4 text-lg md:text-xl font-proxima">
+            <Divider className="h-[2px] w-[40%] bg-cyan-600" />
+            <p className="mt-4 text-lg md:text-xl font-proxima text-gray-900">
               I love writing code that expresses my creativity and my passion for technology. To that extent, I enjoy making websites, using C++, and exploring what it takes to make a video game.
             </p>
 
@@ -47,12 +47,12 @@ export default function Home() {
               Hobbies
             </h2>
             <Divider className="h-[2px] w-[40%] bg-cyan-600" />
-            <p className="mt-4 text-lg md:text-xl font-proxima">
+            <p className="mt-4 text-lg md:text-xl font-proxima text-gray-900">
               When I'm not working on code, I enjoy exercising, learning new ways to cook, and figuring out how to play guitar. I would love to travel more often and experience new cultures as well!
             </p>
           </div>
 
-          <div className="flex-1 relative flex items-center justify-center w-full max-w-md mx-auto">
+          <div className="flex-1 relative flex items-center justify-center w-full max-w-md mx-auto sm:ml-[8%]">
             <svg
               viewBox="0 0 450 450"
               className="absolute w-[120%] h-auto max-w-[800px] md:max-w-[500px] z-0"
@@ -62,11 +62,15 @@ export default function Home() {
                   <stop offset="0%" stopColor="#6ee7b7" />
                   <stop offset="100%" stopColor="#06b6d4" />
                 </linearGradient>
+                <linearGradient id="polyGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#06b6d4" />
+                  <stop offset="100%" stopColor="#ec4899" />
+                </linearGradient>
               </defs>
               <polygon
                 points="225,22.5 387,115.5 387,303 225,397.5 63,303 63,115.5"
                 fill="url(#polyGradient)"
-                stroke="#164e63"
+                stroke="url(#polyGradient2)"
                 strokeWidth="3"
               />
             </svg>
