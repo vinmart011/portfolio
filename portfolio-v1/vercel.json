@@ -1,15 +1,24 @@
 {
   "headers": [
     {
-      "source": "/(.*).br",
+      "source": "/webgl/(.*).js.br",
       "headers": [
+        { "key": "Content-Type", "value": "application/javascript" },
         { "key": "Content-Encoding", "value": "br" }
       ]
     },
     {
-      "source": "/(.*).wasm",
+      "source": "/webgl/(.*).wasm.br",
       "headers": [
-        { "key": "Content-Type", "value": "application/wasm" }
+        { "key": "Content-Type", "value": "application/wasm" },
+        { "key": "Content-Encoding", "value": "br" }
+      ]
+    },
+    {
+      "source": "/webgl/(.*).data.br",
+      "headers": [
+        { "key": "Content-Type", "value": "application/octet-stream" },
+        { "key": "Content-Encoding", "value": "br" }
       ]
     }
   ]
