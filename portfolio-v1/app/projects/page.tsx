@@ -72,7 +72,7 @@ export default function Home() {
 
               <Card className="flex flex-col md:flex-row items-start md:items-center rounded-2xl shadow-lg bg-white p-6 md:pl-[300px]">
                 <div className="text-left max-w-xl mx-auto md:mx-0">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">Friendify</h3>
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">Box Runner</h3>
                   <p className="text-gray-600 text-sm mb-4">
                     Box Runner is a Unity 3D game where I learned how to interact with physics and player movement in an obstacle based running game.
                     This project helped me to learn nuances of the Unity engine as well as sparking interest in game development as a whole.
